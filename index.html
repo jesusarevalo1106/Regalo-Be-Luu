@@ -4,84 +4,88 @@
     <title>Dành tặng Bé Lúu</title>
 
     <style>
-    .mensaje {
-    max-width: 600px;
-    margin: 30px auto;
-    font-size: 30px;
-    line-height: 1.6;
-    text-align: center;
-    font-weight: bold;
-    font-style: italic;
-}
+
+        .mensaje {
+            max-width: 600px;
+            margin: 30px auto;
+            font-size: 30px;
+            line-height: 1.6;
+            text-align: center;
+            font-weight: bold;
+            font-style: italic;
+        }
+
         body {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #F28B82;
-}
+            text-align: center;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #F28B82;
+        }
 
         .nombre {
             font-size: 50px;
             cursor: pointer;
         }
 
-        .instruccion
-#regalo {
-    display: none;
-    margin-top: 40px;
-}
-
-.corazon {
-    width: 100px;
-    height: 100px;
-    background: #008cff;
-    position: relative;
-    transform: rotate(-45deg);
-    animation: latido 1s infinite;
-    margin: 80px auto;
-}
-
-.corazon::before {
-    content: "";
-    width: 100px;
-    height: 100px;
-    background: #008cff;
-    border-radius: 50%;
-    position: absolute;
-    top: -50px;
-    left: 0;
-}
-
-.corazon::after {
-    content: "";
-    width: 100px;
-    height: 100px;
-    background: #008cff;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 50px;
-}
-
-@keyframes latido {
-    0% {
-        transform: rotate(-45deg) scale(1);
-    }
-
-    50% {
-        transform: rotate(-45deg) scale(1.2);
-    }
-
-    100% {
-        transform: rotate(-45deg) scale(1);
-    }
-} {
+        .instruccion {
             font-size: 20px;
         }
+
+        #regalo {
+            display: none;
+            margin-top: 40px;
+        }
+
+        .corazon {
+            width: 100px;
+            height: 100px;
+            background: #008cff;
+            position: relative;
+            transform: rotate(-45deg);
+            animation: latido 1s infinite;
+            margin: 80px auto;
+        }
+
+        .corazon::before {
+            content: "";
+            width: 100px;
+            height: 100px;
+            background: #008cff;
+            border-radius: 50%;
+            position: absolute;
+            top: -50px;
+            left: 0;
+        }
+
+        .corazon::after {
+            content: "";
+            width: 100px;
+            height: 100px;
+            background: #008cff;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 50px;
+        }
+
+        @keyframes latido {
+            0% {
+                transform: rotate(-45deg) scale(1);
+            }
+
+            50% {
+                transform: rotate(-45deg) scale(1.2);
+            }
+
+            100% {
+                transform: rotate(-45deg) scale(1);
+            }
+        }
+
     </style>
 </head>
 
@@ -89,31 +93,31 @@
 
     <h1 onclick="mostrarRegalo()" class="nombre">Bé Lúu</h1>
 
-<p class="instruccion">Chạm vào tên của bạn 💙</p>
-<div id="regalo">
+    <p id="instruccion" class="instruccion">Chạm vào tên của bạn 💙</p>
 
-    <div class="corazon"></div>
+    <div id="regalo">
 
-    <div class="mensaje">
-        <p>
-            Anh đã tìm thấy sự bình yên trong đôi mắt em,
-            và hạnh phúc trong nụ cười của em.
-        </p>
+        <div class="corazon"></div>
 
-        <p>
-            Một món quà nhỏ để nhắc em rằng
-            em rất đặc biệt đối với anh.
-        </p>
+        <div class="mensaje">
+            <p>
+                Anh đã tìm thấy sự bình yên trong đôi mắt em,
+                và hạnh phúc trong nụ cười của em.
+            </p>
+
+            <p>
+                Một món quà nhỏ để nhắc em rằng
+                em rất đặc biệt đối với anh.
+            </p>
+        </div>
+
     </div>
-
-</div>
 
     <script>
         function mostrarRegalo() {
-            function mostrarRegalo() {
+    document.getElementById("instruccion").style.display = "none";
     document.getElementById("regalo").style.display = "block";
-}("Chào, Bé Lúu! 💙");
-        }
+}
     </script>
 
 </body>
